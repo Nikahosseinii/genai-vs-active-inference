@@ -1,12 +1,10 @@
 # From Generative AI to Active Inference: Enhancing Human–AI Interaction via Model Reduction, Refinement, and Unification
 
-This repository provides a benchmark framework for comparing **Active Inference (AIF)** and **Generative AI (DDPM-based)** approaches to network reconfiguration and social contagion dynamics.
+This repository provides a reproducible benchmark for comparing Generative AI and Active Inference using networked social systems inspired by mycorrhizal (fungal) networks. The code implements two complementary generative paradigms:
 
-The code enables simulation and evaluation of:
-- **Social contagion time** (time to full adoption)
-- **Teleological token actuation** (token “bill” accumulation)
-- Structural network evolution under varying spreading probabilities \( r \)
+a DDPM-based generative baseline, adapted from OpenAI’s improved diffusion model and modified to operate on graph adjacency matrices, and
 
+a POMDP-based Active Inference (AIF) model, which performs belief-driven, goal-directed network rewiring through wake, sleep, rest, and precision-modulation dynamics.
 ---
 
 ## Dataset
