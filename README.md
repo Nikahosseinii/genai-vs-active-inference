@@ -19,7 +19,7 @@ The code enables simulation and evaluation of:
 ├── DDPM/                 # DDPM baseline (graph generation)
 ├── data/                 # Input datasets (e.g., x0.pt)
 ├── figures/              # Generated plots and figures
-└── README.md
+└── README.md'''
 Dataset
 This project uses the Scale-Free Small-World Networks (64 nodes) dataset.
 
@@ -108,7 +108,7 @@ All scripts run directly from the command line
 Installation
 Create a Python environment and install the required dependencies:
 
-pip install -r DDPM/requirements.txt
+'''pip install -r DDPM/requirements.txt
 Required Packages
 torch
 
@@ -118,48 +118,48 @@ networkx
 
 mpi4py
 
-blobfile
+blobfile'''
 
 Training DDPM
 Train a DDPM model on the graph dataset.
 
 macOS / Linux
-python DDPM/image_train.py \
+'''python DDPM/image_train.py \
   --data_dir data/scale_free_small_world_64 \
   --image_size 64 \
   --num_channels 128 \
   --num_res_blocks 3 \
   --diffusion_steps 4000 \
   --noise_schedule linear \
-  --lr 1e-4
+  --lr 1e-4'''
 Windows (PowerShell)
-python DDPM\image_train.py `
+'''python DDPM\image_train.py `
   --data_dir data\scale_free_small_world_64 `
   --image_size 64 `
   --num_channels 128 `
   --num_res_blocks 3 `
   --diffusion_steps 4000 `
   --noise_schedule linear `
-  --lr 1e-4
+  --lr 1e-4'''
 Sampling Graphs with DDPM
 After training, generate new graphs using a trained checkpoint.
 
 macOS / Linux
-python DDPM/image_sample.py \
+'''python DDPM/image_sample.py \
   --model_path checkpoints/ema_0.9999_XXXXXX.pt \
   --image_size 64 \
   --num_channels 128 \
   --num_res_blocks 3 \
   --diffusion_steps 4000 \
-  --noise_schedule linear
+  --noise_schedule linear'''
 Windows (PowerShell)
-python DDPM\image_sample.py `
+'''python DDPM\image_sample.py `
   --model_path checkpoints\ema_0.9999_XXXXXX.pt `
   --image_size 64 `
   --num_channels 128 `
   --num_res_blocks 3 `
   --diffusion_steps 4000 `
-  --noise_schedule linear
+  --noise_schedule linear'''
 Replace XXXXXX with the checkpoint step number.
 
 Pretrained DDPM Checkpoint
@@ -177,9 +177,9 @@ Purpose: Non-agentic generative baseline for comparison with Active Inference
 Download: https://drive.google.com/file/d/1YIePTwQaTfC__svLVfMpoySjJXUnG5gu/view?usp=sharing
 
 After downloading, place the checkpoint in the repository as:
-
+'''
 checkpoints/
-└── ema_0.9999_1610000.pt
+└── ema_0.9999_1610000.pt'''
 
 The pretrained checkpoint can be downloaded from Google Drive:
 
