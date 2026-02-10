@@ -1,4 +1,4 @@
-#From Generative AI to Active Inference: Enhancing Human–AI Interaction via Model Reduction, Refinement, and Unification
+# From Generative AI to Active Inference: Enhancing Human–AI Interaction via Model Reduction, Refinement, and Unification
 
 This repository provides a benchmark framework for comparing **Active Inference (AIF)** and **Generative AI (DDPM-based)** approaches to network reconfiguration and social contagion dynamics.
 
