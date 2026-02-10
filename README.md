@@ -1,5 +1,3 @@
-# Generative AI vs Active Inference (Social Contagion Benchmark)
-
 Reference implementation for the paper:
 
 **From Generative AI to Active Inference: Enhancing Human–AI Interaction via Model Reduction, Refinement, and Unification**
@@ -125,6 +123,27 @@ python DDPM\image_sample.py `
   --diffusion_steps 4000 `
   --noise_schedule linear
 Replace XXXXXX with the checkpoint step number.
+
+Pretrained DDPM Checkpoint
+
+We provide a pretrained DDPM checkpoint for graph generation on 64-node scale-free small-world networks.
+
+Model: Improved DDPM adapted for graph adjacency matrices
+
+Diffusion steps: 4000
+
+Training data: IEEE DataPort scale-free small-world networks
+
+Purpose: Non-agentic generative baseline for comparison with Active Inference
+
+Download: https://drive.google.com/file/d/1YIePTwQaTfC__svLVfMpoySjJXUnG5gu/view?usp=sharing
+
+After downloading, place the checkpoint in the repository as:
+
+checkpoints/
+└── ema_0.9999_1610000.pt
+
+The pretrained checkpoint can be downloaded from Google Drive:
 
 Active Inference Benchmark
 The Active Inference implementation includes:
