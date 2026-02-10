@@ -53,15 +53,13 @@ Download: https://drive.google.com/file/d/1YIePTwQaTfC__svLVfMpoySjJXUnG5gu/view
 
 ### Train the DDPM model from scratch
 Alternatively, users may retrain the DDPM using the provided dataset and scripts, then sample graphs from their own trained checkpoint.
-
 In both cases, generated adjacency tensors can be saved every 100 reverse steps to obtain the full denoising trajectory.
 
-
-
-Installation
+### Installation
 Create a Python environment and install the required dependencies:
 
-'''pip install -r DDPM/requirements.txt
+'''bash
+pip install -r DDPM/requirements.txt
 Required Packages
 torch
 
