@@ -2,10 +2,9 @@
 
 This repository provides a reproducible benchmark for comparing Generative AI and Active Inference using networked social systems inspired by mycorrhizal (fungal) networks. The code implements two complementary generative paradigms:
 
-a DDPM-based generative baseline, adapted from OpenAI’s improved diffusion model and modified to operate on graph adjacency matrices, and
+- DPM-based generative baseline, adapted from OpenAI’s improved diffusion model and modified to operate on graph adjacency matrices, and
 
-a POMDP-based Active Inference (AIF) model, which performs belief-driven, goal-directed network rewiring through wake, sleep, rest, and precision-modulation dynamics.
----
+- POMDP-based Active Inference (AIF) model, which performs belief-driven, goal-directed network rewiring through wake, sleep, rest, and precision-modulation dynamics.
 
 ## Dataset
 This project uses the Scale-Free Small-World Networks (64 nodes) dataset.
