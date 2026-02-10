@@ -74,18 +74,6 @@ pip install -r DDPM/requirements.txt
 ### Training DDPM
 Train a DDPM model on the graph dataset.
 
-macOS / Linux
-```bash
-python DDPM/image_train.py \
-  --data_dir data/scale_free_small_world_64 \
-  --image_size 64 \
-  --num_channels 128 \
-  --num_res_blocks 3 \
-  --diffusion_steps 4000 \
-  --noise_schedule linear \
-  --lr 1e-4
-```
-Windows (PowerShell)
 ```bash
 python DDPM\image_train.py `
   --data_dir data\scale_free_small_world_64 `
@@ -96,25 +84,19 @@ python DDPM\image_train.py `
   --noise_schedule linear `
   --lr 1e-4
 ```
-Sampling Graphs with DDPM
+
+### Sampling Graphs with DDPM
 After training, generate new graphs using a trained checkpoint.
 
-macOS / Linux
-'''python DDPM/image_sample.py \
-  --model_path checkpoints/ema_0.9999_XXXXXX.pt \
-  --image_size 64 \
-  --num_channels 128 \
-  --num_res_blocks 3 \
-  --diffusion_steps 4000 \
-  --noise_schedule linear'''
-Windows (PowerShell)
-'''python DDPM\image_sample.py `
+```bash
+python DDPM\image_sample.py `
   --model_path checkpoints\ema_0.9999_XXXXXX.pt `
   --image_size 64 `
   --num_channels 128 `
   --num_res_blocks 3 `
   --diffusion_steps 4000 `
-  --noise_schedule linear'''
+  --noise_schedule linear
+```
 Replace XXXXXX with the checkpoint step number.
 
 Pretrained DDPM Checkpoint
