@@ -47,32 +47,16 @@ These saved tensors correspond to noisy graph states.
 
 For reverse diffusion (graph generation), users have two options:
 
-## Use the provided pretrained checkpoint
+### Use the provided pretrained checkpoint
 Download the checkpoint linked above and sample graphs by running the reverse denoising process starting from pure noise, as in standard DDPM sampling.
+Download: https://drive.google.com/file/d/1YIePTwQaTfC__svLVfMpoySjJXUnG5gu/view?usp=sharing
 
-Train the DDPM model from scratch
+### Train the DDPM model from scratch
 Alternatively, users may retrain the DDPM using the provided dataset and scripts, then sample graphs from their own trained checkpoint.
 
 In both cases, generated adjacency tensors can be saved every 100 reverse steps to obtain the full denoising trajectory.
 
-Each .pt file must contain a 64 × 64 adjacency matrix
 
-
-If your filenames differ, update the corresponding paths in the scripts
-
-
-
-
-
-The original implementation is designed for image generation using RGB pixel grids. In this work, we adapt the model for graph generation and network rewiring, inspired by the generative dynamics of mycorrhizal (fungal) networks.
-
-Conceptually, we interpret DDPM’s forward diffusion process as biomimicking the branching and exploratory growth of fungi, while the reverse denoising process biomimics fusion and structural consolidation. Graphs sampled from the learned reverse process exhibit power-law degree distributions and low average path lengths, reflecting the well-known combination of scale-free hubs and small-world organization observed in natural mycorrhizal networks.
-
-No VS Code configuration is required
-
-No launch.json is required
-
-All scripts run directly from the command line
 
 Installation
 Create a Python environment and install the required dependencies:
