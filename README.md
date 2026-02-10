@@ -32,23 +32,22 @@ We include a DDPM baseline for graph generation, adapted from standard diffusion
 Our DDPM baseline is adapted from OpenAI’s Improved DDPM implementation:
 https://github.com/openai/improved-diffusion
 
+We modified the original image-based DDPM to operate on graph adjacency matrices instead of RGB images. In particular, we replace image tensors with symmetric binary adjacency tensors, apply thresholding to convert continuous outputs into discrete graph edges, and analyze each generated tensor as a NetworkX graph. These adaptations allow DDPM to generate scale-free, small-world network structures, which are then used as a non-agentic generative baseline for comparison with Active Inference–based network rewiring.
+
+
 ### Forward Diffusion (Trajectory Generation)
 
 To generate diffusion trajectories:
-
 Load data/x0.pt as the initial adjacency tensor.
-
 Run the DDPM forward diffusion process starting from this seed graph.
-
 Save intermediate adjacency tensors every 100 diffusion steps (e.g., steps 0, 100, 200, …, 4000).
-
 These saved tensors correspond to noisy graph states.
 
 ### Reverse Diffusion (Sampling)
 
 For reverse diffusion (graph generation), users have two options:
 
-Use the provided pretrained checkpoint
+## Use the provided pretrained checkpoint
 Download the checkpoint linked above and sample graphs by running the reverse denoising process starting from pure noise, as in standard DDPM sampling.
 
 Train the DDPM model from scratch
@@ -63,7 +62,6 @@ If your filenames differ, update the corresponding paths in the scripts
 
 
 
-We modified the original image-based DDPM to operate on graph adjacency matrices instead of RGB images. In particular, we replace image tensors with symmetric binary adjacency tensors, apply thresholding to convert continuous outputs into discrete graph edges, and analyze each generated tensor as a NetworkX graph. These adaptations allow DDPM to generate scale-free, small-world network structures, which are then used as a non-agentic generative baseline for comparison with Active Inference–based network rewiring.
 
 
 The original implementation is designed for image generation using RGB pixel grids. In this work, we adapt the model for graph generation and network rewiring, inspired by the generative dynamics of mycorrhizal (fungal) networks.
