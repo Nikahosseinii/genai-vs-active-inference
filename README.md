@@ -104,34 +104,8 @@ python DDPM\image_sample.py `
 ```
 Replace XXXXXX with the checkpoint step number.
 
+## Reproducing the figures
 
+After generating diffusion tensors using DDPM (forward diffusion and reverse denoising, optionally saved every 100 steps), only the initial seed graph x0.pt is required to run the Active Inference (AIF) experiments.
 
-
-The pretrained checkpoint can be downloaded from Google Drive:
-
-Active Inference Benchmark
-The Active Inference implementation includes:
-
-Wake-only dynamics
-
-Wake–sleep and wake–rest cycles
-
-Bayesian Model Reduction (BMR)
-
-Entropy-maximizing rest
-
-Precision modulation (including psychedelic intervention experiments)
-
-These scripts reproduce the structural and dynamical results reported in the paper, including:
-
-Small-world index
-
-Characteristic path length
-
-Clustering coefficient
-
-Prior entropy
-
-Posterior synchrony
-
-Confidence dynamics
+Once x0.pt is placed in the data/ directory, you can run all Python scripts in the scripts/ folder to regenerate the full set of figures reported in the paper, including network evolution, entropy dynamics, small-world metrics, social contagion time, and token actuation.
