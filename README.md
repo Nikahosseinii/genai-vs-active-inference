@@ -101,6 +101,12 @@ python DDPM\image_sample.py `
 ```
 Replace XXXXXX with the checkpoint step number.
 
+### Precomputed DDPM Diffusion and Sampling Tensors
+To facilitate full reproducibility and avoid the computational cost of rerunning DDPM training and diffusion, we provide precomputed diffusion and sampling tensors.
+These tensors correspond to the forward diffusion trajectory and the reverse denoising (sampling) process of the DDPM baseline, saved at regular intervals.
+
+All DDPM diffusion and sampling tensors can be downloaded from https://drive.google.com/drive/folders/1AoccxejlbZ_bcJGA8xeoGfmK-ELLfUVk
+
 ## Reproducing the figures
 
 After generating diffusion tensors using DDPM (forward diffusion and reverse denoising, optionally saved every 100 steps), only the initial seed graph x0.pt is required to run the Active Inference (AIF) experiments.
