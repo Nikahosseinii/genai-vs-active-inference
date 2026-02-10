@@ -50,6 +50,11 @@ For reverse diffusion (graph generation), users have two options:
 ### Use the provided pretrained checkpoint
 Download the checkpoint linked above and sample graphs by running the reverse denoising process starting from pure noise, as in standard DDPM sampling.
 Download: https://drive.google.com/file/d/1YIePTwQaTfC__svLVfMpoySjJXUnG5gu/view?usp=sharing
+After downloading, place the checkpoint in the repository as:
+```bash
+checkpoints/
+└── ema_0.9999_1610000.pt
+```
 
 ### Train the DDPM model from scratch
 Alternatively, users may retrain the DDPM using the provided dataset and scripts, then sample graphs from their own trained checkpoint.
@@ -99,24 +104,8 @@ python DDPM\image_sample.py `
 ```
 Replace XXXXXX with the checkpoint step number.
 
-Pretrained DDPM Checkpoint
 
-We provide a pretrained DDPM checkpoint for graph generation on 64-node scale-free small-world networks.
 
-Model: Improved DDPM adapted for graph adjacency matrices
-
-Diffusion steps: 4000
-
-Training data: IEEE DataPort scale-free small-world networks
-
-Purpose: Non-agentic generative baseline for comparison with Active Inference
-
-Download: https://drive.google.com/file/d/1YIePTwQaTfC__svLVfMpoySjJXUnG5gu/view?usp=sharing
-
-After downloading, place the checkpoint in the repository as:
-'''
-checkpoints/
-└── ema_0.9999_1610000.pt'''
 
 The pretrained checkpoint can be downloaded from Google Drive:
 
