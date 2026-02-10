@@ -9,7 +9,7 @@ The code enables simulation and evaluation of:
 
 ---
 
-**Dataset
+** Dataset
 This project uses the Scale-Free Small-World Networks (64 nodes) dataset.
 
 Download
