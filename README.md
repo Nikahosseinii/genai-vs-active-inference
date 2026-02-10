@@ -71,27 +71,31 @@ pip install -r DDPM/requirements.txt
 - blobfile
 
 
-Training DDPM
+### Training DDPM
 Train a DDPM model on the graph dataset.
 
 macOS / Linux
-'''python DDPM/image_train.py \
+```bash
+python DDPM/image_train.py \
   --data_dir data/scale_free_small_world_64 \
   --image_size 64 \
   --num_channels 128 \
   --num_res_blocks 3 \
   --diffusion_steps 4000 \
   --noise_schedule linear \
-  --lr 1e-4'''
+  --lr 1e-4
+```
 Windows (PowerShell)
-'''python DDPM\image_train.py `
+```bash
+python DDPM\image_train.py `
   --data_dir data\scale_free_small_world_64 `
   --image_size 64 `
   --num_channels 128 `
   --num_res_blocks 3 `
   --diffusion_steps 4000 `
   --noise_schedule linear `
-  --lr 1e-4'''
+  --lr 1e-4
+```
 Sampling Graphs with DDPM
 After training, generate new graphs using a trained checkpoint.
 
