@@ -9,10 +9,9 @@ The code enables simulation and evaluation of:
 
 ---
 
-** Dataset
+## Dataset
 This project uses the Scale-Free Small-World Networks (64 nodes) dataset.
 
-Download
 Please download the dataset from IEEE DataPort:
 
 https://ieee-dataport.org/documents/scale-free-small-world-networks-64-nodes
