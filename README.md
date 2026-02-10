@@ -32,6 +32,46 @@ https://ieee-dataport.org/documents/scale-free-small-world-networks-64-nodes
 
 The dataset consists of adjacency matrices representing scale-free networks with small-world properties.
 
+Generating Diffusion Trajectories and Samples
+
+All diffusion experiments start from the same seed graph, provided as:
+
+data/x0.pt
+
+
+This file contains the initial ring-lattice / small-world seed adjacency matrix used to initialize the DDPM forward diffusion process.
+
+Forward Diffusion (Trajectory Generation)
+
+To generate diffusion trajectories:
+
+Load data/x0.pt as the initial adjacency tensor.
+
+Run the DDPM forward diffusion process starting from this seed graph.
+
+Save intermediate adjacency tensors every 100 diffusion steps (e.g., steps 0, 100, 200, …, 4000).
+
+These saved tensors correspond to noisy graph states 
+𝑥
+𝑡
+x
+t
+	​
+
+ along the forward diffusion trajectory and can be used for structural analysis or visualization.
+
+Reverse Diffusion (Sampling)
+
+For reverse diffusion (graph generation), users have two options:
+
+Use the provided pretrained checkpoint
+Download the checkpoint linked above and sample graphs by running the reverse denoising process starting from pure noise, as in standard DDPM sampling.
+
+Train the DDPM model from scratch
+Alternatively, users may retrain the DDPM using the provided dataset and scripts, then sample graphs from their own trained checkpoint.
+
+In both cases, generated adjacency tensors can be saved every 100 reverse steps to obtain the full denoising trajectory.
+
 Expected Directory Structure
 After downloading and extracting the dataset, place it in the repository as follows:
 
