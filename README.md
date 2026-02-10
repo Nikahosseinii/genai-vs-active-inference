@@ -11,7 +11,6 @@ The code enables simulation and evaluation of:
 
 ## Repository Structure
 
-```text
 .
 ├── src/
 │   └── utils/            # Utility functions (e.g., graph initialization)
