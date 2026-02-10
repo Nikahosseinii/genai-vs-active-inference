@@ -27,6 +27,11 @@ data/x0.pt
 
 This file contains the initial ring-lattice / small-world seed adjacency matrix used to initialize the DDPM forward diffusion process.
 
+### DDPM Baseline (Graph Generation)
+We include a DDPM baseline for graph generation, adapted from standard diffusion models and used only as a comparison method.
+Our DDPM baseline is adapted from OpenAI’s Improved DDPM implementation:
+https://github.com/openai/improved-diffusion
+
 ### Forward Diffusion (Trajectory Generation)
 
 To generate diffusion trajectories:
@@ -56,10 +61,7 @@ Each .pt file must contain a 64 × 64 adjacency matrix
 
 If your filenames differ, update the corresponding paths in the scripts
 
-DDPM Baseline (Graph Generation)
-We include a DDPM baseline for graph generation, adapted from standard diffusion models and used only as a comparison method.
-Our DDPM baseline is adapted from OpenAI’s Improved DDPM implementation:
-https://github.com/openai/improved-diffusion
+
 
 We modified the original image-based DDPM to operate on graph adjacency matrices instead of RGB images. In particular, we replace image tensors with symmetric binary adjacency tensors, apply thresholding to convert continuous outputs into discrete graph edges, and analyze each generated tensor as a NetworkX graph. These adaptations allow DDPM to generate scale-free, small-world network structures, which are then used as a non-agentic generative baseline for comparison with Active Inference–based network rewiring.
 
