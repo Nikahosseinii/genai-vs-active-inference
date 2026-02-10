@@ -53,6 +53,15 @@ If your filenames differ, update the corresponding paths in the scripts
 
 DDPM Baseline (Graph Generation)
 We include a DDPM baseline for graph generation, adapted from standard diffusion models and used only as a comparison method.
+Our DDPM baseline is adapted from OpenAI’s Improved DDPM implementation:
+https://github.com/openai/improved-diffusion
+
+We modified the original image-based DDPM to operate on graph adjacency matrices instead of RGB images. In particular, we replace image tensors with symmetric binary adjacency tensors, apply thresholding to convert continuous outputs into discrete graph edges, and analyze each generated tensor as a NetworkX graph. These adaptations allow DDPM to generate scale-free, small-world network structures, which are then used as a non-agentic generative baseline for comparison with Active Inference–based network rewiring.
+
+
+The original implementation is designed for image generation using RGB pixel grids. In this work, we adapt the model for graph generation and network rewiring, inspired by the generative dynamics of mycorrhizal (fungal) networks.
+
+Conceptually, we interpret DDPM’s forward diffusion process as biomimicking the branching and exploratory growth of fungi, while the reverse denoising process biomimics fusion and structural consolidation. Graphs sampled from the learned reverse process exhibit power-law degree distributions and low average path lengths, reflecting the well-known combination of scale-free hubs and small-world organization observed in natural mycorrhizal networks.
 
 No VS Code configuration is required
 
