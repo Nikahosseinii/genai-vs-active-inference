@@ -58,18 +58,18 @@ In both cases, generated adjacency tensors can be saved every 100 reverse steps 
 ### Installation
 Create a Python environment and install the required dependencies:
 
-'''bash
+```bash
 pip install -r DDPM/requirements.txt
-Required Packages
-torch
+```
 
-numpy
+**Required packages:**
 
-networkx
+- torch  
+- numpy  
+- networkx  
+- mpi4py  
+- blobfile
 
-mpi4py
-
-blobfile'''
 
 Training DDPM
 Train a DDPM model on the graph dataset.
