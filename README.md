@@ -9,17 +9,7 @@ The code enables simulation and evaluation of:
 
 ---
 
-## Repository Structure
-
-.
-├── src/
-│   └── utils/            # Utility functions (e.g., graph initialization)
-├── scripts/              # Runnable experiments and benchmarks
-├── DDPM/                 # DDPM baseline (graph generation)
-├── data/                 # Input datasets (e.g., x0.pt)
-├── figures/              # Generated plots and figures
-└── README.md'''
-Dataset
+**Dataset
 This project uses the Scale-Free Small-World Networks (64 nodes) dataset.
 
 Download
